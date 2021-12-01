@@ -1,0 +1,851 @@
+/* Estilo general de la web */
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Scroll-bar Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(107, 106, 106) none;
+}
+
+/* Scroll-bar Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: none;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(107, 106, 106);
+    border-radius: 20px;
+    border: 1px thin rgb(107, 106, 106);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(107, 106, 106);
+    border-radius: 20px;
+}
+
+header {
+    background-color: black;
+    height: 12%;
+    width: 100%;
+}
+
+/* Grid para el contenedor padre del header */
+.contenedorHeader {
+    display: grid;
+    grid-template-areas:
+        "logo menu menu";
+    place-content: center space-evenly;
+    place-items: center center;
+    width: 100%;
+}
+
+/* Grid para el contenedor del nav */
+.contenedorNav {
+    display: grid;
+    place-content: center center;
+    place-items: stretch center;
+    width: 100%;
+}
+
+nav li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 10px;
+    padding-bottom: 1%;
+}
+
+.contenedorNav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    margin: 15px;
+}
+
+.contenedorNav a:hover {
+    background-color: rgb(37, 130, 184);
+}
+
+#contenedorLogo {
+    padding-top: 5%;
+}
+
+/* Media query para centrar la imagen */
+@media (max-width: 800px) {
+    #contenedorLogo {
+        padding-left: 10%;
+    }
+}
+
+/* Main - Seccion 1 */
+main .sec1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F8FA;
+    height: 400px;
+}
+
+.contenedorSec1 #sec1 #headerSec1 {
+    text-align: center;
+}
+
+/* Main - Seccion 1  - Header 1*/
+section #headerSec1 #h1Sec1 {
+    font-size: 60px;
+    margin: 0;
+    text-align: center;
+    animation: slideInDown;
+    animation-duration: 1.5s;
+}
+
+/* Media query para adaptar el tamaño del header a la pantalla */
+@media screen and (max-width: 850px) {
+    section #headerSec1 #h1Sec1 {
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section #headerSec1 #h1Sec1 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    section #headerSec1 #h1Sec1 {
+        font-size: 40px;
+    }
+}
+
+/* Main - Seccion 1  - Header 2*/
+section #headerSec1 #h2Sec1 {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 1%;
+    margin: 0;
+}
+
+/* Media query para adaptar el tamaño del header a la pantalla */
+@media screen and (max-width: 850px) {
+    section #headerSec1 #h2Sec1 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section #headerSec1 #h2Sec1 {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    section #headerSec1 #h2Sec1 {
+        font-size: 30px;
+    }
+}
+
+section #italic_h2Sec1 {
+    color: rgb(37, 130, 184);
+    text-shadow: 0.5px 1px rgb(37, 130, 184);
+}
+
+/* Main - Seccion 1  - Header 3 */
+section #headerSec1 #h3Sec1 {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 2%;
+    margin: 0;
+}
+
+/* Media query para adaptar el tamaño del header a la pantalla */
+@media screen and (max-width: 850px) {
+    section #headerSec1 #h3Sec1 {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    section #headerSec1 #h3Sec1 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    section #headerSec1 #h3Sec1 {
+        font-size: 20px;
+    }
+}
+
+section #italic_h3Sec1 {
+    color: rgb(37, 130, 184);
+    text-shadow: 0.5px 1px rgb(37, 130, 184);
+}
+
+/* Main - Seccion 2 */
+/* Grid para el contenedor padre de la sección */
+.contenedorSec2 {
+    display: grid;
+    grid-template-areas:
+        "texto foto";
+    column-gap: 2%;
+    background-color: white;
+    color: black;
+    height: 450px;
+    animation: slideInRight;
+    animation-duration: 1.5s;
+}
+/* Media query con grid para controlar
+ * la disposición de los contenedores hijos 
+ */
+@media screen and (max-width: 850px) {
+    .contenedorSec2 {
+        grid-template-areas:
+            "texto"
+            "foto";
+        place-content: center center;
+        row-gap: 2%;
+        height: 700px;
+    }
+}
+
+/* Main - Seccion 2  - Header 1 */
+h1#hSec2 {
+    font-size: 50px;
+    text-shadow: 0.5px 1px black;
+    margin: 0;
+    padding-left: 5.5%;
+    padding-top: 4.5%;
+}
+
+/* Media query para adaptar el tamaño del header a la pantalla */
+@media screen and (max-width: 1320px) {
+    h1#hSec2 {
+        text-align: center;
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    h1#hSec2 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1#hSec2 {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    h1#hSec2 {
+        font-size: 30px;
+    }
+}
+
+h2#sbhSec2 {
+    padding-top: 3%;
+    padding-left: 7%;
+    font-size: 35px;
+    margin: 0;
+    color: rgb(37, 130, 184);
+}
+
+/* Media query para adaptar el tamaño del header a la pantalla */
+@media screen and (max-width: 1320px) {
+    h2#sbhSec2 {
+        padding-top: 1%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    h2#sbhSec2 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h2#sbhSec2 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    h2#sbhSec2 {
+        font-size: 20px;
+    }
+}
+
+.blueBold {
+    color: rgb(37, 130, 184);
+}
+/* Propiedad grid para el texto de la sección */
+#contenedorSec2Left {
+    display: inline-grid;
+    place-content: start center;
+}
+
+section #text1Sec2,
+#text2Sec2,
+#text3Sec2 {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    padding-top: 2.5%;
+    padding-left: 9%;
+    margin: 0;
+}
+
+/* Media query para adaptar el tamaño del texto a la pantalla */
+@media screen and (max-width: 1320px) {
+
+    p#text1Sec2,
+    p#text2Sec2,
+    p#text3Sec2 {
+        padding-left: 7%;
+        padding-right: 1%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    p#text1Sec2,
+    p#text2Sec2,
+    p#text3Sec2 {
+        font-size: 17px;
+        padding-left: 7%;
+        padding-right: 1%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    p#text1Sec2,
+    p#text2Sec2,
+    p#text3Sec2 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+
+    p#text1Sec2,
+    p#text2Sec2,
+    p#text3Sec2 {
+        font-size: 15px;
+    }
+}
+
+/* Media query para adaptar el tamaño de la imagen a la pantalla */
+@media screen and (max-width: 1320px) {
+    img#codingSkills {
+        width: 90%;
+        padding-left: 5%;
+    }
+}
+
+/* Main - Seccion 3 */
+.sec3 {
+    height: 430px;
+    animation: slideInLeft;
+    animation-duration: 1.5s;
+    background-color: #F5F8FA;
+}
+/* Grid para el contenedor padre de la sección */
+.contenedorSec3 {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        "app1 app2 app3";
+    place-items: center center;
+    column-gap: 1%;
+    padding: 2%;
+}
+/* Media query con grid para controlar
+ * la disposición de los contenedores hijos 
+ */
+@media screen and (max-width: 1160px) {
+    .sec3 {
+        height: 940px;
+    }
+    .contenedorSec3 {
+        grid-template-areas:
+            "app1"
+            "app2"
+            "app3";
+        place-items: center center;
+        row-gap: 1%;
+    }
+}
+h1#hSec3 {
+    font-size: 50px;
+    color: rgba(37, 130, 184);
+    text-shadow: 0.5px 1px rgba(37, 130, 184);
+    padding-top: 1%;
+    padding-left: 3%;
+    margin: 0;
+}
+
+/* Media query para adaptar el tamaño del header a la pantalla */
+@media screen and (max-width: 1320px) {
+    h1#hSec3 {
+        font-size: 45px;
+        text-align: center;
+        padding-top: 2%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    h1#hSec3 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1#hSec3 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    h1#hSec3 {
+        font-size: 35px;
+    }
+}
+
+/* Formato del box de las aplicación */
+.app {
+    border-radius: 2%;
+    border: solid rgb(107, 106, 106) 1px;
+    background-color: white;
+    box-shadow: 5px 7px rgb(107, 106, 106);
+    height: 250px;
+    min-width: 300px;
+    margin: 1%;
+}
+
+.app p {
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 3%;
+    margin: 0;
+}
+
+/* Main - Seccion 4 */
+.sec4 {
+    height: 420px;
+    animation: slideInRight;
+    animation-duration: 1.5s;
+    background-color: rgb(37, 130, 184);
+}
+/* Grid para el contenedor padre de la sección */
+.contenedorSec4 {
+    display: grid;
+    grid-template-areas:
+        "titulo textoSec4 foto";
+    place-content: stretch center ;
+    column-gap: 1%;
+}
+
+/* Media query con grid para controlar
+ * la disposición de los contenedores hijos 
+ */
+@media screen and (max-width: 1320px) {
+    .sec4 {
+      height: 830px;  
+    }
+    .contenedorSec4 {
+        grid-template-areas:
+            "titulo"
+            "textoS4"
+            "foto";
+        place-items: center center;
+        row-gap: 1%;
+    }
+    #textSec4 {
+        padding-left: 8%;
+    }
+    #contenedorSec4Right {
+        padding-left: 8%;
+    }
+}
+#contenedorhSec4 {
+    padding-left: 9%;
+    padding-top: 3%;
+}
+
+h1#hSec4 {
+    font-size: 50px;
+    margin: 0;
+    color: #F5F8FA;
+    text-shadow: 0.5px 1px #F5F8FA;
+}
+
+/* Media query para adaptar el tamaño del header a la pantalla */
+@media screen and (max-width: 1320px) {
+    h1#hSec4 {
+        padding-top: 1.5%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    h1#hSec4 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1#hSec4 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    h1#hSec4 {
+        font-size: 35px;
+    }
+}
+
+#textSec4 {
+    padding-top: 2%;
+    overflow: hidden;
+}
+
+.whiteBold {
+    color: white;
+}
+
+section #text1Sec4,
+#text2Sec4,
+#text3Sec4 {
+    font-size: 18px;
+    font-weight: 450;
+    text-align: left;
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-bottom: 3%;
+    border-left: solid 2px black;
+}
+
+/* Media query para adaptar el tamaño del texto a la pantalla */
+@media screen and (max-width: 850px) {
+    #textSec4 {
+        padding-top: 0;
+    }
+}
+
+
+img#professionalExp {
+    height: 90%;
+    width: 90%;
+}
+
+.copyright a {
+    text-decoration: underline;
+    color: black
+}
+
+/* Main - Seccion 5 */
+.sec5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 200px;
+    animation: fadeInUp;
+    animation-duration: 1.5s;
+}
+
+section #h1Sec5 {
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 0.5px 1px black;
+    color: black;
+    padding-top: 2%;
+    margin: 0;
+}
+
+/* Media query para adaptar el tamaño del header a la pantalla */
+@media screen and (max-width: 850px) {
+    section #h1Sec5 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section #h1Sec5 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    section #h1Sec5 {
+        font-size: 35px;
+    }
+}
+
+#mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2.5%;
+}
+#mailAdress {
+    padding-bottom:3% ;
+}
+#mailAdress a {
+    text-decoration: underline;
+    text-align: center;
+    font-weight: 500;
+    font-size: 25px;
+    color: rgb(37, 130, 184);
+    margin: 0;
+}
+
+/* Main - Seccion 6 */
+main .sec6 {
+    background-color: #F5F8FA;
+    height: 330px;
+}
+
+section #h1Sec6 {
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 0.5px 1px rgb(37, 130, 184);
+    color: rgb(37, 130, 184);
+    padding-top: 2%;
+    margin: 0;
+}
+
+/* Media query para adaptar el tamaño del header a la pantalla */
+@media screen and (max-width: 850px) {
+    h1#h1Sec6 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1#h1Sec6 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    h1#h1Sec6 {
+        font-size: 35px;
+    }
+}
+
+/* Implementación de z-Index - Box Newsletter */
+#zBox1 {    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: solid 1px black;
+    height: 34%;
+    width: 34%;
+    position: relative;
+    left: 34%;
+    z-index: 20;
+    box-shadow: 5px 7px black;
+    margin-top: 2%;
+}
+
+/* Implementación de z-Index - Box Botón */
+#zBox2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7%;
+    background-color: rgb(37, 130, 184);
+    height: 9%;
+    width: 5%;
+    position: relative;
+    margin: 0;
+    z-index: 20;
+    left: 62%;
+    bottom: 21%;
+    text-align: center;
+}
+
+/* Media query para evitar desbordamiento de texto */
+@media screen and (max-width: 850px) {
+    #zBox2 {
+        width: 6%;
+    }
+}
+
+#zBox2 p {
+    font-weight: 500;
+    color: white;
+}
+
+/* Media query para adaptar el tamaño del texto del div a la pantalla */
+@media screen and (max-width: 1030px) {
+    #zBox2 p{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #zBox2 p{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #zBox2 p{
+        font-size: 9px;
+    }
+}
+
+/* Implementación de z-Index - Box Campo email */
+#zBox3 {
+    border: solid 2px grey;
+    height: 9%;
+    width: 23%;
+    left: 37%;
+    bottom: 30.5%;
+    position: relative;
+    z-index: 20;
+}
+
+/* Implementación de z-Index - Box Newsletter */
+#zBox4 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 9%;
+    width: 23%;
+    left: 38%;
+    bottom: 40%;
+    font-weight: 500;
+    color: grey;
+    position: relative;
+    z-index: 30;
+    font-size: 13px;
+}
+
+/* Media query para adaptar el tamaño del texto a la pantalla */
+@media screen and (max-width: 1010px) {
+    #zBox4 {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #zBox4 {
+        font-size: 10px;
+    }
+}
+
+/* Implementación de z-Index - Logo */
+#zBox5 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    left: 8%;
+    bottom: 90%;
+    position: relative;
+    z-index: 20;
+}
+
+#logoNewsletter {
+    height: auto;
+    max-width: 100%;
+    padding-right: 2%;
+    padding-bottom: 5%;
+}
+
+/* Implementación de z-Index - Box Newsletter - Punto Azul */
+#zBox6 {
+    left: 35.3%;
+    bottom: 146%;
+    position: relative;
+    z-index: 20;
+}
+
+/* Footer - Estilo general */
+footer {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    font-size: 12px;
+    height: 10%;
+}
+/* Grid para el contenedor padre del footer */
+.footerWeb {
+    display: grid;
+    grid-template-areas: 
+        "copy enlaces socialMedia";
+    justify-content: space-evenly;
+    place-items: space-evenly center;
+}
+
+.footerWeb a:hover {
+    background-color: rgb(37, 130, 184);
+}
+
+/* Media query con grid para controlar
+ * la disposición de los contenedores hijos 
+ */
+@media (max-width: 800px) {
+    .footerWeb {
+        grid-template-areas: 
+        "copy"
+        "enlaces" 
+        "socialMedia";
+        place-items: center center;
+        row-gap: 2%;
+    }
+}
+
+/* Footer - Estilo enlaces */
+footer #enlacesFooter a {
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+    font-size: 13px;
+}
+/* Footer - Estilo iconos de redes sociales */
+.fa {
+    padding: 5px;
+    font-size: 15px !important;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 70%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-twitter {
+    background: black;
+    color: white;
+}
+
+.fa-github {
+    background: black;
+    color: white;
+}
+
+.fa-linkedin {
+    background: black;
+    color: white;
+}
